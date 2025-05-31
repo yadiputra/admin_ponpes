@@ -16,16 +16,19 @@
                     // Jika login berhasil
                     $this->session->set_userdata('user_id', $user->users_kd);
                     $this->session->set_userdata('username', $user->username);
-                    redirect('admin'); // Ganti 'home' dengan halaman yang diinginkan
+                    $data['berita'] = $this->model_app->view('berita')->result_array();
+            		//
+            		$data['message']="";
+            		$this->template->load('template2','admin/list_berita',$data);
                 } else {
                     // Jika login gagal
                     $this->session->set_flashdata('error', 'Username atau password salah');
-                    redirect('login');
+                    $this->load->view('login_form');
                 }
             }
 
             public function logout() {
                 $this->session->sess_destroy();
-                redirect('login');
+                $this->load->view('login_form');
             }
         }

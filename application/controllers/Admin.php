@@ -20,8 +20,6 @@ class Admin extends CI_Controller {
 	 */
 	public function index()
 	{
-		//print_r($this->uri->segment(3));die();
-		cek_session();
 		if (isset($_POST['submit'])){
 		if($this->uri->segment(3)==""){
 		print_r($this->uri->segment(3));die();
@@ -101,7 +99,6 @@ class Admin extends CI_Controller {
 	
 	public function list_berita()
 	{
-		cek_session();
 		$data['berita'] = $this->model_app->view('berita')->result_array();
 		//
 		$data['message']="";
@@ -111,7 +108,6 @@ class Admin extends CI_Controller {
 	
 	public function berita()
 	{
-		cek_session();
 		//print_r($this->uri->segment(3));die();
 		$data['berita'] = $this->model_app->edit('berita',array('kod'=>$this->uri->segment(3)))->row_array();
 		$data['message']="";
@@ -121,7 +117,6 @@ class Admin extends CI_Controller {
 	
 	public function berita_del()
 	{
-		cek_session();
 		//print_r($this->uri->segment(3));die();
 		$foto = $this->model_app->edit('berita',array('kod'=>$this->uri->segment(3)))->row_array();
 		//print_r($foto);die();
@@ -143,7 +138,6 @@ class Admin extends CI_Controller {
 	
 	public function add_eskul()
 	{
-		cek_session();
 		$eskul = array(
 		"id"=>"",
 		"nama"=>"",
@@ -205,7 +199,6 @@ class Admin extends CI_Controller {
 	
 	public function eskul()
 	{
-		cek_session();
 		//print_r($this->uri->segment(3));die();
 		if($this->uri->segment(3)==""){
 		$data['eskul'] = array(
@@ -229,7 +222,6 @@ class Admin extends CI_Controller {
 	
 	public function eskul_del()
 	{
-		cek_session();
 		//print_r($this->uri->segment(3));die();
 		$foto = $this->model_app->edit('eskul',array('id'=>$this->uri->segment(3)))->row_array();
 		//print_r($foto);die();
@@ -252,7 +244,6 @@ class Admin extends CI_Controller {
 	
 	public function slide()
 	{
-		cek_session();
 		if($this->uri->segment(3)==""){
 		$data['slide'] = array(
 		"csl_id"=>"",
@@ -279,7 +270,6 @@ class Admin extends CI_Controller {
 	
 	public function add_slide()
 	{
-		cek_session();
 		$slide = array(
 		"csl_id"=>"",
 		"title"=>"",
@@ -345,7 +335,6 @@ class Admin extends CI_Controller {
 	
 	public function slide_del()
 	{
-		cek_session();
 		//print_r($this->uri->segment(3));die();
 		$foto = $this->model_app->edit('carousel',array('csl_id'=>$this->uri->segment(3)))->row_array();
 		//print_r($foto);die();
@@ -369,7 +358,6 @@ class Admin extends CI_Controller {
 	
 	public function ppdb()
 	{
-		cek_session();
 		
 		$dat =array(
 		"nama_depan"=>$this->input->post('nama_depan'),
