@@ -22,7 +22,7 @@ class Admin extends CI_Controller {
 	{
 		if (isset($_POST['submit'])){
 		if($this->uri->segment(3)==""){
-		print_r($this->uri->segment(3));die();
+		//print_r($this->uri->segment(3));die();
 		$config['upload_path'] = 'assets/img/';
 		$config['allowed_types'] = 'gif|jpg|png|jpeg';
 		$config['max_size'] = '5000'; // kb
