@@ -29,7 +29,7 @@
                                     </div>
 									<input type="text" class="form-control hidden" name="img" value="<?php echo $eskul['img'] ?>">
 									<i style='color:red' <?php echo $eskul['hidden'] ?>>Gambar Saat ini : </i>
-									<a target='_BLANK' href="http://localhost/ponpes_admin/assets/img/<?php echo $eskul['img'] ?>"><?php echo $eskul['img'] ?></a>   
+									<a target='_BLANK' href="<?php echo base_url();?>assets/img/<?php echo $eskul['img'] ?>"><?php echo $eskul['img'] ?></a>   
                                 </div>
 							 </div>
 							<button class="btn btn-primary waves-effect" type="submit" name="submit">Kirim</button>
@@ -62,7 +62,7 @@
 									echo "
                                         <tr>
                                             <td>".$row['nama']."</td>
-                                            <td><img class='img-responsive' src='http://localhost/ponpes_admin/assets/img/".$row['img']."'></td>
+                                            <td><img class='img-responsive' src='".base_url()."assets/img/".$row['img']."'></td>
                                             <td>
 											<div class='button-demo'>
 												<a type='button' href='".base_url()."admin/eskul/".$row['id']."' class='btn btn-warning waves-effect'>EDIT</a>

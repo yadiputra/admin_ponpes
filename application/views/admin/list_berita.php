@@ -31,7 +31,7 @@
                                             <td>".$row['title']."</td>
                                             <td>".phpmu($row['detail'], 200)."</td>
                                             <td>".tgl_indo($row['tgl_up'])."</td>
-                                            <td><img class='img-responsive' src='http://localhost/ponpes_admin/assets/img/".$row['img']."'></td>
+                                            <td><img class='img-responsive' src='".base_url()."assets/img/".$row['img']."'></td>
                                             <td>
 											<div class='button-demo'>
 												<a type='button' href='".base_url()."admin/index/".$row['kod']."' class='btn btn-warning waves-effect'>EDIT</a>

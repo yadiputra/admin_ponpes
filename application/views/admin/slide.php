@@ -12,7 +12,7 @@
                             </h2>
                         </div>
                         <div class="body">
-						<form action="http://localhost/ponpes_admin/admin/add_slide/<?php echo $slide['csl_id'] ?>" method="post" enctype="multipart/form-data">
+						<form action="<?php echo base_url();?>admin/add_slide/<?php echo $slide['csl_id'] ?>" method="post" enctype="multipart/form-data">
                         <h2 class="card-inside-title">Judul</h2>
 						<div class="form-group form-float">
 							<div class="form-line focused">
@@ -34,7 +34,7 @@
                                         </div>
 										 	<input type="text" class="form-control hidden" name="img" value="<?php echo $slide['foto'] ?>">
 											<i style='color:red' <?php echo $slide['hidden'] ?>>Gambar Saat ini : </i>
-											<a target='_BLANK' href="http://localhost/ponpes_admin/assets/img/<?php echo $slide['foto'] ?>"><?php echo $slide['foto'] ?></a>   
+											<a target='_BLANK' href="<?php echo base_url();?>assets/img/<?php echo $slide['foto'] ?>"><?php echo $slide['foto'] ?></a>   
 									   
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@
                                         <tr>
                                             <td>".$row['title']."</td>
                                             <td>".phpmu($row['detail'], 200)."</td>
-                                            <td><img class='img-responsive' src='http://localhost/ponpes_admin/assets/img/".$row['foto']."'></td>
+                                            <td><img class='img-responsive' src='".base_url()."assets/img/".$row['foto']."'></td>
                                             <td>
 											<div class='button-demo'>
 												<a type='button' href='".base_url()."admin/slide/".$row['csl_id']."' class='btn btn-warning waves-effect'>EDIT</a>

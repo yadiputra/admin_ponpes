@@ -28,7 +28,7 @@
                                         </div>
 											<input type="text" class="form-control hidden" name="img" value="<?php echo $berita['img'] ?>">
 											<i style='color:red' <?php echo $berita['hidden'] ?>>Gambar Saat ini : </i>
-											<a target='_BLANK' href="http://localhost/ponpes_admin/assets/img/<?php echo $berita['img'] ?>"><?php echo $berita['img'] ?></a>   
+											<a target='_BLANK' href="<?php echo base_url();?>assets/img/<?php echo $berita['img'] ?>"><?php echo $berita['img'] ?></a>   
                                
                                     </div>
                                 </div>
